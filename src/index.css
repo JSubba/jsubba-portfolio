@@ -12,8 +12,4 @@
     @apply px-4;
     @apply cursor-pointer;
   }
-  .toggle-menu li {
-    @apply py-6;
-    @apply text-4xl;
-  }
 }
