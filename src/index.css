@@ -13,3 +13,25 @@
     @apply cursor-pointer;
   }
 }
+
+.content-div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 15rem;
+}
+
+.content-div:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(34, 211, 238, 0.9),
+    rgba(6, 182, 212, 0.9),
+    rgba(30, 64, 175, 0.9)
+  ) !important;
+}
+
+input,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
