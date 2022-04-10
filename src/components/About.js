@@ -3,8 +3,8 @@ import AboutImage from "../assets/img/about-image.png";
 
 const About = () => {
   return (
-    <section className="bg-gray-900 text-gray-500 py-8">
-      <div className="max-w-[1000px] mx-auto ">
+    <section name="about" className="bg-gray-900 text-gray-500">
+      <div className="max-w-[1000px] mx-auto pb-16 sm:pb-0">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="about-image">
             <img

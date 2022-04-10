@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const formRef = useRef();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_vab8u7m",
+        "template_flpozjq",
+        formRef.current,
+        "V76xfe1WZnKViSMVp"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <section
       name="contact"
-      className="w-full h-screen bg-gray-900 flex justify-center items-center p-4 pt-32"
+      className="w-full h-screen bg-gray-900 flex justify-center items-center px-4 pt-8 md:pt-20"
     >
       <form
-        method="POST"
-        action="https://getform.io/f/a699a1b2-f225-434e-b317-1fbbde8e006c"
+        ref={formRef}
+        onSubmit={handleSubmit}
         className="flex flex-col max-w-[600px] w-full h-full"
       >
         <div className="pb-8">
@@ -23,21 +44,31 @@ const Contact = () => {
           className="bg-slate-200 p-2 rounded"
           type="text"
           placeholder="Name"
-          name="name"
+          name="user_name"
         />
         <input
-          className="my-4 p-2 bg-slate-200 rounded"
+          className="my-2 p-2 bg-slate-200 rounded"
           type="email"
           placeholder="Email"
-          name="email"
+          name="user_email"
         />
+        <input
+          className="mb-2 p-2 bg-slate-200 rounded"
+          type="text"
+          placeholder="Subject"
+          name="user_subject"
+        />
+
         <textarea
           className="bg-slate-200 p-2 rounded"
           name="message"
           rows="10"
           placeholder="Message"
         ></textarea>
-        <button className="text-white border-2 hover:bg-cyan-500 px-4 py-3 my-8 mx-auto flex items-center">
+        <button
+          className="text-white border-2 hover:bg-cyan-500 px-4 py-3 my-8 mx-auto flex items-center"
+          onSubmit={handleSubmit}
+        >
           Let's Collaborate
         </button>
       </form>

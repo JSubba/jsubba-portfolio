@@ -13,10 +13,9 @@ const Skills = () => {
   return (
     <section
       name="skills"
-      className="w-full h-screen bg-gray-900 text-gray-300 py-20"
+      className="w-full h-screen bg-gray-900 text-gray-300"
     >
-      {/* Container */}
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center w-full h-full">
+      <div className="max-w-[62rem] mx-auto px-8 flex flex-col justify-center w-full h-full">
         <div>
           <p className="text-4xl font-bold inline border-b-4 border-cyan-500 h-full">
             Skills

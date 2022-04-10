@@ -4,7 +4,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 const Home = () => {
   return (
     <section name="home" className="bg-gray-900 text-gray-300 w-full h-screen">
-      <div className="max-w-[62rem] mx-auto px-8 flex flex-col justify-center h-full">
+      <div className="max-w-[55rem] mx-auto px-8 flex flex-col justify-center h-full">
         <h1 className="text-3xl text-cyan-500 sm:text-5xl font-bold">
           J.Subba
         </h1>
