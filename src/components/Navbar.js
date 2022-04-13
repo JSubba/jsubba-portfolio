@@ -18,31 +18,40 @@ const Navbar = () => {
   return (
     <section
       name="navbar"
-      className="fixed w-full h-20 flex justify-between items-center px-4 bg-gray-900 text-gray-300"
+      className="fixed w-full h-20 flex justify-between items-center px-4 text-gray-300 z-10"
     >
-      <img src={Logo} alt="logo" style={{ width: "3rem" }} />
+      <img src={Logo} alt="logo" style={{ width: "2.5rem" }} />
       <ul className="hidden md:flex">
-        <li>
+        <li className="shadow shadow-blue-500/40 mr-1">
           <Link to="home" smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li>
+        <li
+          className="shadow shadow-blue-500/40 
+        mr-1"
+        >
           <Link to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li>
+        <li
+          className="shadow shadow-blue-500/40 
+        mr-1"
+        >
           <Link to="skills" smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li>
+        <li
+          className="shadow shadow-blue-500/40 
+        mr-1"
+        >
           <Link to="projects" smooth={true} duration={500}>
             Projects
           </Link>
         </li>
-        <li>
+        <li className="shadow shadow-blue-500/40">
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>
@@ -95,13 +104,13 @@ const Navbar = () => {
         </li>
       </ul>
       {/* social icons  */}
-      <ul className="hidden lg:flex fixed flex-col top-[35%] left-0">
+      <ul className="hidden lg:flex fixed flex-col top-[30%] left-0">
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-sky-700">
           <a
             href="/"
             className="flex justify-between items-center w-full text-gray-300"
           >
-            Github
+            LinkedIn
             <FaLinkedinIn size={30} />
           </a>
         </li>

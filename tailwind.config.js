@@ -7,7 +7,12 @@ module.exports = {
       lg: "990px",
       xl: "1200px",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "home-pattern":
+          "linear-gradient(to right bottom, rgba(17, 24, 39, 0.8), rgba(17, 24, 39,0.9)), url(../src/assets/img/home.png)",
+      },
+    },
   },
   plugins: [],
 };

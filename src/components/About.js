@@ -3,9 +3,10 @@ import AboutImage from "../assets/img/about-image.png";
 
 const About = () => {
   return (
-    <section name="about" className="bg-gray-900 text-gray-500">
-      <div className="max-w-[1000px] mx-auto pb-16 sm:pb-0">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <section name="about" className="bg-gray-900 text-gray-300 pt-32 pb-6">
+      {/* <div className="max-w-[55rem] mx-auto pb-16 sm:pb-0"> */}
+      <div className="max-w-[55rem] mx-auto flex flex-col justify-center w-full h-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="about-image">
             <img
               class="mx-auto h-80 object-cover  border-1 border-gray-600 rounded shadow-md shadow-gray-500"
