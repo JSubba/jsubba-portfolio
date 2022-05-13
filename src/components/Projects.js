@@ -61,7 +61,7 @@ const Projects = () => {
           <div className="project5 h-40 shadow-lg shadow-[#040c16] group container rounded flex justify-center items-center mx-auto content-div hover:scale-105 duration-500">
             <div className="opacity-100 text-center">
               <div className="pt-8 text-center">
-                <a href="https://jitensayasjop.netlify.app/" target="_blank">
+                <a href="https://jitensayashop.netlify.app/" target="_blank">
                   <button className="text-center rounded px-4 py-1 bg-gray-300 hover:bg-white text-gray-900 font-bold text-lg shadow shadow-gray-500">
                     Demo
                   </button>
