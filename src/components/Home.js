@@ -4,11 +4,11 @@ import { Link } from "react-scroll";
 
 const Home = () => {
   return (
-    <section
+    <header
       name="home"
-      className="bg-home-pattern bg-right sm:bg-center bg-cover  bg-no-repeat text-gray-300 w-full h-screen"
+      className="bg-gray-900 bg-right sm:bg-center bg-cover bg-no-repeat text-gray-300 w-full h-screen"
     >
-      <div className="max-w-[55rem] mx-auto px-8 pt-12 flex flex-col justify-center h-full">
+      <div className="max-w-[55rem] mx-auto px-8 -m-8 flex flex-col justify-center h-full">
         <h1 className="text-4xl text-cyan-500 sm:text-5xl font-bold">
           J.Subba
         </h1>
@@ -22,7 +22,7 @@ const Home = () => {
         </p>
         <div>
           <Link to="projects" smooth={true} duration={500}>
-            <button className="px-6 py-3 my-2 flex items-center shadow-md shadow-blue-500 hover:text-cyan-500 hover:shadow-cyan-500 hover:scale-105 ease-in duration-500">
+            <button className="px-6 py-3 my-2 flex items-center shadow-md shadow-cyan-500 hover:text-cyan-500 hover:scale-105 ease-in duration-500 font-semibold">
               View Projects
               <span>
                 <HiArrowNarrowRight className="ml-3 " />
@@ -31,7 +31,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

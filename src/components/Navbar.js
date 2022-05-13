@@ -16,42 +16,33 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <section
+    <nav
       name="navbar"
-      className="fixed w-full h-20 flex justify-between items-center px-4 text-gray-300 z-10"
+      className="bg-gray-900 w-full h-16 flex justify-between items-center px-4 text-gray-300"
     >
-      <img src={Logo} alt="logo" style={{ width: "2.5rem" }} />
+      <img src={Logo} alt="logo" style={{ width: "7rem" }} />
       <ul className="hidden md:flex">
-        <li className="shadow shadow-blue-500/40 mr-1">
+        <li className="shadow shadow-[#040c16] mr-1">
           <Link to="home" smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li
-          className="shadow shadow-blue-500/40 
-        mr-1"
-        >
+        <li className="shadow shadow-[#040c16] mr-1">
           <Link to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li
-          className="shadow shadow-blue-500/40 
-        mr-1"
-        >
+        <li className="shadow shadow-[#040c16] mr-1">
           <Link to="skills" smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li
-          className="shadow shadow-blue-500/40 
-        mr-1"
-        >
+        <li className="shadow shadow-[#040c16] mr-1">
           <Link to="projects" smooth={true} duration={500}>
             Projects
           </Link>
         </li>
-        <li className="shadow shadow-blue-500/40">
+        <li className="shadow shadow-[#040c16]">
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>
@@ -60,34 +51,35 @@ const Navbar = () => {
       <div
         className="md:hidden z-10 text-3xl"
         onClick={handleClick}
-        style={{ width: "3rem" }}
+        style={{ width: "2.5rem", fontSize: "1.5rem" }}
       >
         {nav ? <FaTimes /> : <FaBars />}
       </div>
+
       {/* toggle-menu */}
       <ul
         className={
           nav
-            ? "absolute top-0 left-0 w-full h-screen bg-stone-900 flex flex-col justify-center items-center"
+            ? "absolute top-0 left-0 w-full h-screen bg-gray-900 flex flex-col justify-center items-center"
             : "hidden"
         }
       >
-        <li className="py-6 text-4xl">
+        <li className="py-6 text-4xl hover:underline">
           <Link to="home" onClick={handleClick} smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li className="py-6 text-4xl">
+        <li className="py-6 text-4xl hover:underline">
           <Link to="about" onClick={handleClick} smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li className="py-6 text-4xl">
+        <li className="py-6 text-4xl hover:underline">
           <Link to="skills" onClick={handleClick} smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li className="py-6 text-4xl">
+        <li className="py-6 text-4xl hover:underline">
           <Link
             to="projects"
             onClick={handleClick}
@@ -97,17 +89,18 @@ const Navbar = () => {
             Projects
           </Link>
         </li>
-        <li className="py-6 text-4xl">
+        <li className="py-6 text-4xl hover:underline">
           <Link to="contact" onClick={handleClick} smooth={true} duration={500}>
             Contact
           </Link>
         </li>
       </ul>
+
       {/* social icons  */}
-      <ul className="hidden lg:flex fixed flex-col top-[30%] left-0">
+      <ul className="hidden lg:flex fixed flex-col top-[32%] left-0">
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-sky-700">
           <a
-            href="/"
+            href="https://www.linkedin.com/in/jsubba/"
             className="flex justify-between items-center w-full text-gray-300"
           >
             LinkedIn
@@ -116,7 +109,7 @@ const Navbar = () => {
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
           <a
-            href="/"
+            href="https://github.com/"
             className="flex justify-between items-center w-full text-gray-300"
           >
             Github
@@ -125,7 +118,7 @@ const Navbar = () => {
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
           <a
-            href="/"
+            href="https://www.facebook.com/profile.php?id=100081027348654"
             className="flex justify-between items-center w-full text-gray-300"
           >
             Facebook
@@ -133,13 +126,15 @@ const Navbar = () => {
           </a>
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
-          <a
-            href="/"
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
             className="flex justify-between items-center w-full text-gray-300"
           >
             Email
             <HiOutlineMail size={30} />
-          </a>
+          </Link>
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
           <a
@@ -151,7 +146,7 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-    </section>
+    </nav>
   );
 };
 
